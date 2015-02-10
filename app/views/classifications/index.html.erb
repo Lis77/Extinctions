@@ -1,0 +1,12 @@
+
+<h1>List of Extinctions</h1>
+<% @classifications.each do |classification| %>
+<p>
+
+
+
+<%= link_to(classification.name, classification_path(classification)) %>
+
+</p>	    
+
+<% end %>
