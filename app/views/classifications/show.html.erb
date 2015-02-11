@@ -1,18 +1,17 @@
 <h1> Classification: <%= @classification.name %></h1>
 
 
-	 <%= @classification.animal.each do |animal| %>
+	 <%= @classification.animals.each do |animal| %>
 <p>
- Animal <%= link_to(animal.name, animal_path(animal)) %> 
+ Animal <%= link_to(animal.name,animal_path(animal)) %> 
 
-<h2><%= link_to(image_tag(image_url.animal, animal_path(animal))%> </h2>
+<h2><%=image_tag(animal.image_url)%> </h2>
 
  Extinction Date: 
-<%= link_to(animal.extinction_date)%> </br>
+<%= animal.extinction_date%> </br>
 Recent Extinctions:
-<%= link_to(animal.recent?) %>
+<%= animal.recent?%>
 
 </p>
-
 <%end%>
 

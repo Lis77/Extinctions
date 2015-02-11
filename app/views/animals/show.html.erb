@@ -1,0 +1,21 @@
+<h1> Scientific Name: <%= @animal.name %></h1>
+
+<p>
+Common Names:
+<%@animal.common_names.each do |common_name| %>
+ <%=common_name.name %>
+  <br>
+
+<%=image_tag(@animal.image_url)%> 
+Extinction Date: 
+<%=@animal.extinction_date%> </br>
+Recent Extinctions:
+<%=@animal.recent?%>]
+
+<%=link_to "Source url", @animal.url %>
+
+
+
+</p>
+
+<% end %>
